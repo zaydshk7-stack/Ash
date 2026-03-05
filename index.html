@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASHER – THE SKIN LEGEND</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial;
+}
+
+body{
+background:#060617;
+color:white;
+overflow-x:hidden;
+}
+
+/* insane animated color background */
+
+body::before{
+content:"";
+position:fixed;
+top:-100%;
+left:-100%;
+width:300%;
+height:300%;
+background:
+radial-gradient(circle,#ff00cc44,transparent 40%),
+radial-gradient(circle,#00f2ff44,transparent 40%),
+radial-gradient(circle,#00ff8844,transparent 40%),
+radial-gradient(circle,#ffcc0044,transparent 40%);
+animation:bgspin 30s linear infinite;
+z-index:-1;
+}
+
+@keyframes bgspin{
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+}
+
+/* navbar */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#00000066;
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+background:linear-gradient(90deg,#ff00cc,#00f2ff,#00ff88,#ffcc00);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:700;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00f2ff;
+}
+
+/* hero */
+
+.hero{
+height:75vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero h1{
+font-size:90px;
+letter-spacing:3px;
+background:linear-gradient(90deg,#ff00cc,#00f2ff,#00ff88,#ffcc00);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+font-size:24px;
+margin-top:20px;
+max-width:900px;
+line-height:1.5;
+}
+
+.cta{
+margin-top:30px;
+padding:16px 40px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:linear-gradient(90deg,#ff00cc,#00f2ff);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.cta:hover{
+transform:scale(1.15);
+}
+
+/* section */
+
+section{
+padding:90px 8%;
+}
+
+section h2{
+text-align:center;
+font-size:46px;
+margin-bottom:50px;
+background:linear-gradient(90deg,#ff00cc,#00f2ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* grid */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
+}
+
+/* card */
+
+.card{
+background:#0f1335;
+border-radius:20px;
+overflow:hidden;
+position:relative;
+transition:.4s;
+}
+
+.card:hover{
+transform:rotateX(6deg) rotateY(-6deg) scale(1.07);
+}
+
+.card img{
+width:100%;
+height:310px;
+object-fit:cover;
+}
+
+/* rarity */
+
+.legendary{
+border:4px solid orange;
+box-shadow:0 0 25px orange;
+}
+
+.epic{
+border:4px solid purple;
+box-shadow:0 0 25px purple;
+}
+
+.mythic{
+border:4px solid red;
+box-shadow:0 0 25px red;
+}
+
+.rare{
+border:4px solid #00e5ff;
+box-shadow:0 0 25px #00e5ff;
+}
+
+/* labels */
+
+.rarity{
+position:absolute;
+top:12px;
+left:12px;
+background:black;
+padding:6px 15px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+.price{
+position:absolute;
+top:12px;
+right:12px;
+background:#000000cc;
+padding:6px 15px;
+border-radius:20px;
+font-size:13px;
+}
+
+.card h3{
+padding:15px 18px 5px;
+}
+
+.card p{
+padding:0 18px 20px;
+font-size:14px;
+opacity:.9;
+}
+
+/* insane glaze section */
+
+.legend-section{
+max-width:1000px;
+margin:auto;
+background:linear-gradient(135deg,#ff00cc33,#00f2ff33,#00ff8833);
+padding:60px;
+border-radius:20px;
+text-align:center;
+font-size:20px;
+line-height:1.7;
+}
+
+.legend-section strong{
+color:#ffcc00;
+}
+
+/* footer */
+
+footer{
+margin-top:70px;
+padding:30px;
+text-align:center;
+background:#03030d;
+opacity:.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">ASHER</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Item Shop</a></li>
+<li><a href="#">Concept Skins</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">The Legend</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<h1>ASHER</h1>
+
+<p>
+The unstoppable creative force behind some of the most mind-blowing Fortnite
+skin concepts ever imagined. When imagination meets pure skill, you get Asher.
+Every design feels legendary before it even hits the item shop.
+</p>
+
+<button class="cta">ENTER THE SKIN LAB</button>
+
+</div>
+
+<section>
+
+<h2>Legendary Creations</h2>
+
+<div class="grid">
+
+<div class="card legendary">
+<div class="rarity">LEGENDARY</div>
+<div class="price">2000 V-Bucks</div>
+<img src="https://images.unsplash.com/photo-1606112219348-204d7d8b94ee">
+<h3>Solar Titan</h3>
+<p>A cosmic destroyer forged from the core of a supernova.</p>
+</div>
+
+<div class="card epic">
+<div class="rarity">EPIC</div>
+<div class="price">1500 V-Bucks</div>
+<img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa">
+<h3>Cyber Ronin</h3>
+<p>A neon samurai built for futuristic battles.</p>
+</div>
+
+<div class="card mythic">
+<div class="rarity">MYTHIC</div>
+<div class="price">2500 V-Bucks</div>
+<img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
+<h3>Void Breaker</h3>
+<p>A mysterious fighter born from the Fortnite rift.</p>
+</div>
+
+<div class="card rare">
+<div class="rarity">RARE</div>
+<div class="price">1200 V-Bucks</div>
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1">
+<h3>Neon Phantom</h3>
+<p>Silent assassin glowing with electric energy.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>The Legend Behind The Skins</h2>
+
+<div class="legend-section">
+
+<p>
+There are designers… and then there is <strong>Asher</strong>.
+</p>
+
+<p>
+A creative mind so powerful that every concept he touches feels like it
+belongs in the Fortnite multiverse. His designs aren't just skins —
+they’re <strong>characters, stories, and legends</strong>.
+</p>
+
+<p>
+While others follow trends, <strong>Asher creates them</strong>.
+His imagination turns neon lights, cosmic energy, cyber warriors,
+and futuristic armor into skins that players instantly wish were real.
+</p>
+
+<p>
+In the world of Fortnite concepts, <strong>Asher isn’t just good.</strong>
+He’s a <strong>legend in the making.</strong>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© ASHER SKIN LAB • LEGENDARY CONCEPT DESIGNER
+</footer>
+
+</body>
+</html>
